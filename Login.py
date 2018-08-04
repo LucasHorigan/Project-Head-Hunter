@@ -68,17 +68,3 @@ def try_login(session, username, password):
         'method': 'post'
     })
     return mainPage
-
-def main():
-    """
-    main method that controls logic and asks for username and password then calls try_login
-    :return: none
-    """
-    username = input('enter your username: ')
-    password = input('enter your password: ')
-    session = requests.session()
-    handshake_mainPage = try_login(session, username,password)
-    session.close()
-
-if __name__ == '__main__':
-    main()
